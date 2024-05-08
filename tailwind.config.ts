@@ -18,6 +18,25 @@ const config = {
       },
     },
     extend: {
+      borderColor: {
+        primary: "#032B44",
+        secondary: "#F7DC6F",
+        tertiary: '#E5E5E5'
+      },
+      textColor: {
+        primary: "#032B44",
+        secondary: "#F7DC6F",
+        tertiary: '#E5E5E5'
+      },
+      backgroundColor: {
+        primary: "#032B44",
+        secondary: "#F7DC6F",
+        tertiary: '#E5E5E5'
+      },
+      screens: {
+        xxs: "200px",
+        xs: "400px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
