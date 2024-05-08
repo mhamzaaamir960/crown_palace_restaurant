@@ -4,8 +4,8 @@ import logo from "@/assets/logo.png";
 
 function Logo() {
   return (
-    <div>
-      <Image src={logo} alt="crown palace logo" width={70} height={70} />
+    <div className="flex shrink-0">
+      <Image src={logo} alt="crown palace logo" width={65} height={65} />
     </div>
   );
 }
