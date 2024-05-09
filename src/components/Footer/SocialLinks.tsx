@@ -9,7 +9,6 @@ import {
 
 async function SocialLinks() {
   const data = await getSocialLinks();
-  console.log(data);
   return (
     <div className="flex flex-col justify-center gap-y-4 mt-5 sm:mt-10 h-full p-4">
       <h3 className="text-secondary font-semibold text-2xl">Social Links</h3>
@@ -48,21 +47,4 @@ async function SocialLinks() {
 
 export default SocialLinks;
 
-// async function SocialLinks() {
-//   const data : any = await getData();
-//   const social_links : any = await data.items.filter(
-//     (item: any) => item.sys.contentType.sys.id === "socialLinks"
-//   );
-//   console.log(social_links)
-//   return (
-
-//     <div>
-//         <h3 className="text-secondary font-semibold text-2xl">Social Links</h3>
-//         <p>Follow us on social media for more updates!</p>
-//         {social_links.map((item:any, index:number) => (
-//             <Link key={index} href={item.fields.socialLinks}>abc</Link>
-//         ))}
-//       </div>
-//   )}
-
-//   export default SocialLinks
+//

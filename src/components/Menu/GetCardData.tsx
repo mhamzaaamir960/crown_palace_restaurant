@@ -14,7 +14,7 @@ async function GetCardData({ menuItems }: { menuItems: any }) {
         menuItems.map((item: any, index: number) => {
           counter++;
           if (counter > 5) return;
-          return <MenuCard images={images} cardData={item} index={index} />;
+          return <MenuCard key={index} images={images} cardData={item} index={index} />;
         }) }
     </div>
   );

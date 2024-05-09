@@ -20,13 +20,13 @@ function ReviewCards({ reviews }: { reviews: any }) {
       className="my-16 max-w-[90%] min-w-[250px] w-full flex flex-wrap justify-center items-center"
     >
       <CarouselContent className="flex gap-4 p-4 justify-center items-center ">
-        {reviews?.map((item: any, index: number) => (
+        {reviews && reviews.map((item: any, index: number) => (
           <CarouselItem
             key={index}
             className="flex flex-col items-start justify-center  p-2 md:p-4  max-w-[450px] bg-primary rounded-lg"
           >
             <h5 className="text-lg italic text-gray-300 line-clamp-6">
-              " {item.fields.reviewComment}
+               {item.fields.reviewComment}
             </h5>
             <span className="mt-4 mb-1 text-white text-2xl font-bold">
               {item.fields.custumerName}

@@ -10,6 +10,7 @@ function FooterLinks() {
         <div className="flex flex-col gap-y-1 ml-2  ">
           {navLinks.map((item: { title: string; link: string }) => (
             <Link
+            key={item.title}
               className="text-gray-300 hover:text-secondary hover:transition-all hover:delay-75 hover:duration-300 ease-in-out text-base"
               href={item.link}
             >

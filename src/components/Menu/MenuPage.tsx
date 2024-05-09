@@ -14,7 +14,7 @@ async function MenuPage() {
       <Heading textColor="text-primary" heading="Menu & Prices"/>
       <div className="flex flex-wrap justify-evenly items-center w-full  gap-y-10 gap-x-4 mt-20 mb-20">
         {items.map((item: any, index: number) => (
-          <MenuCard images={images} cardData={item} index={index} />
+          <MenuCard key={index} images={images} cardData={item} index={index} />
         ))}
       </div>
     </main>

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Schedule({ time }: { time: any }) {
   time.sort((a: any, b: any) => a.fields.sequenceId - b.fields.sequenceId);
 
@@ -19,11 +18,11 @@ function Schedule({ time }: { time: any }) {
       </div>
       <div className="w-full p-2 sm:p-4">
         {time &&
-          time.map((item: any) =>
+          time.map((item: any, index:number) =>
             item.fields.restaurantOpenClosed === true ? (
               <>
                 <div
-                  key={item.fields.dayOfWeek}
+                  key={index}
                   className="grid grid-cols-3 p-2"
                 >
                   <h3 className="flex justify-start text-white text-lg md:text-xl font-normal font-sans">
@@ -41,7 +40,7 @@ function Schedule({ time }: { time: any }) {
             ) : (
               <>
                 <div
-                  key={item.fields.dayOfWeek}
+                  key={index}
                   className="grid grid-cols-3 p-2 "
                 >
                   <h3 className="flex justify-start text-white text-xl font-normal font-sans text-lg md:text-xl ">
