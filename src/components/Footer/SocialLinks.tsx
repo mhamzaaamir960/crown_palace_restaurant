@@ -13,7 +13,7 @@ async function SocialLinks() {
   return (
     <div className="flex flex-col justify-center gap-y-4 mt-5 sm:mt-10 h-full p-4">
       <h3 className="text-secondary font-semibold text-2xl">Social Links</h3>
-      <p className="text-gray-300 ">
+      <p className="text-gray-300 max-w-[200px] ">
         Follow us on social media for more updates!
       </p>
       <div className="flex gap-x-2">
