@@ -1,4 +1,4 @@
-import { HeroSection, Menu, OpeningTimes } from "@/components/index";
+import { HeroSection, Menu, OpeningTimes, Reviews } from "@/components/index";
 
 export default async function Home() {
   return (
@@ -6,6 +6,7 @@ export default async function Home() {
       <HeroSection />
       <Menu />
       <OpeningTimes />
+      <Reviews />
     </>
   );
 }
