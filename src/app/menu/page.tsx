@@ -1,9 +1,8 @@
-import React from 'react'
+import MenuPage from "@/components/Menu/MenuPage";
+import React from "react";
 
 function page() {
-  return (
-    <div>page</div>
-  )
+  return <MenuPage />;
 }
 
-export default page
+export default page;

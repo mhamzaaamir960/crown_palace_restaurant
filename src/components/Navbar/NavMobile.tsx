@@ -22,9 +22,9 @@ function NavMobile() {
         </span>
       </div>
       <div
-        className={`flex flex-col sm:flex-row justify-start sm:justify-between items-start p-4   gap-y-4 sm:gap-0  sm:p-0 sm:items-center sm:w-[78vw] md:w-[73vw]  lg:w-[65vw] absolute top-0 left-0 sm:static ${
+        className={`flex flex-col sm:flex-row justify-start sm:justify-between items-start p-4   gap-y-4 sm:gap-0  sm:p-0 sm:items-center sm:w-[78vw] md:w-[79vw]  lg:w-[75vw] xl:w-[67vw] absolute left-0 sm:static ${
           open ? "top-16" : "-top-[500px] "
-        } w-full bg-inherit z-0 transition-all ease-in-out duration-500 delay-100  sm:delay-0 sm:duration-0 sm:ease-linear`}
+        } w-full bg-inherit  transition-all ease-in-out duration-500 delay-100  sm:delay-0 sm:duration-0 sm:ease-linear`}
       >
         <NavLinks />
         <CallButton />
