@@ -10,7 +10,7 @@ import {
 
 function ReviewCards({ reviews }: { reviews: any }) {
   const plugin = useRef(
-    Autoplay({ delay: 1000, stopOnInteraction: true,  })
+    Autoplay({ delay: 1000, stopOnInteraction: true,   })
   );
   return (
     <Carousel

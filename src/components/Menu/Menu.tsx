@@ -14,7 +14,6 @@ export async function ItemsData() {
 
 async function Menu() {
   const $menuItems = await ItemsData();
-  console.log($menuItems);
   return (
     <section className="min-h-[80vh] min-w-[250px] w-full flex flex-col  items-center p-4  gap-y-16 bg-gray-100 ">
       <Heading heading="Menu & Prices" textColor="text-primary"/>
