@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 
 function Footer() {
   return (
-    <footer className="w-full min-h-[40vh] flex flex-col gap-y-6 items-center bg-primary border-t-4 border-t-secondary p-4 min-w-[250px]">
+    <footer className="w-full min-h-[35vh] flex flex-col gap-y-6 items-center bg-primary border-t-4 border-t-secondary p-4 min-w-[250px]">
       <div className="flex flex-wrap justify-start  xl:justify-around items-start w-full mb-10 gap-x-8">
         <FooterMetaData />
         <FooterLinks />
