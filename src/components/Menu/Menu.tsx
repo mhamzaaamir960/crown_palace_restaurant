@@ -1,6 +1,6 @@
 import React from "react";
+import Heading from "../Heading/Heading";
 import GetCardData from "./GetCardData";
-import MenuHeading from "./MenuHeading";
 import getData from "@/config/getData";
 import MenuPageBtn from "./MenuPageBtn";
 
@@ -16,8 +16,8 @@ async function Menu() {
   const $menuItems = await ItemsData();
   console.log($menuItems);
   return (
-    <section className="min-h-screen min-w-[200px] w-full flex flex-col  items-center p-4  gap-y-16">
-      <MenuHeading />
+    <section className="min-h-[80vh] min-w-[250px] w-full flex flex-col  items-center p-4  gap-y-16 ">
+      <Heading heading="Menu & Prices" textColor="text-primary"/>
       <GetCardData menuItems={$menuItems} />
       <MenuPageBtn />
     </section>

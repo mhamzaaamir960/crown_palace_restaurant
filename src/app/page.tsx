@@ -1,10 +1,11 @@
-import { HeroSection, Menu } from "@/components/index";
+import { HeroSection, Menu, OpeningTimes } from "@/components/index";
 
 export default async function Home() {
   return (
     <>
       <HeroSection />
       <Menu />
+      <OpeningTimes />
     </>
   );
 }
