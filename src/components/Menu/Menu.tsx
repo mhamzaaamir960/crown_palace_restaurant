@@ -15,8 +15,11 @@ export async function ItemsData() {
 async function Menu() {
   const $menuItems = await ItemsData();
   return (
-    <section className="min-h-[50vh] min-w-[250px] w-full flex flex-col  items-center p-4  gap-y-16 bg-gray-100 ">
-      <Heading heading="Menu & Prices" textColor="text-primary"/>
+    <section
+      id="menu"
+      className="min-h-[50vh] min-w-[300px] w-full flex flex-col  items-center p-4  gap-y-16 bg-gray-100 "
+    >
+      <Heading heading="Menu & Prices" textColor="text-primary" />
       <GetCardData menuItems={$menuItems} />
       <MenuPageBtn />
     </section>

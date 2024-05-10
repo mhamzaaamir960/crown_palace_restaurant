@@ -9,7 +9,7 @@ async function OpeningTimes() {
     (item: any) => item.sys.contentType.sys.id === "openingTimes"
   );
   return (
-    <section className="min-h-[50vh] h min-w-[250px] w-full flex flex-col items-center bg-primary p-4 ">
+    <section className="min-h-[50vh] h min-w-[300px] w-full flex flex-col items-center bg-primary p-4 ">
       <Heading heading="Opening Times" textColor="text-secondary" />
       <Schedule time={openingTimes} />
     </section>

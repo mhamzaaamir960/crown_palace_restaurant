@@ -9,7 +9,7 @@ async function Reviews() {
         item.sys.contentType.sys.id === 'reviews'
     ))
   return (
-    <section className="min-h-[40vh]  min-w-[250px] w-full flex flex-col items-center bg-gray-200 p-4 ">
+    <section className="min-h-[40vh]  min-w-[300px] w-full flex flex-col items-center bg-gray-200 p-4 ">
       <Heading textColor="text-primary" heading="Reviews" />
       <ReviewCards reviews={$reviews} />
     </section>

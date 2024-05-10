@@ -3,7 +3,7 @@ import { TbMessageCircleShare } from "react-icons/tb";
 
 function ContactForm() {
   return (
-    <div className="flex  justify-center min-h-[400px] bg-primary rounded-xl min-w-[300px] max-w-[450px] w-full ">
+    <div className="flex  justify-center min-h-[400px] bg-primary rounded-xl max-w-[450px] w-full ">
       <div className="flex flex-1 flex-col justify-center items-center gap-y-2 w-full max-w-[80%] gap-y-4">
         <input
           placeholder="Name"
