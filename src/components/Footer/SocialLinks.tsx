@@ -7,6 +7,11 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
+export async function generateStaticParams() {
+  const data = await getSocialLinks();
+  return data;
+}
+
 async function SocialLinks() {
   const data = await getSocialLinks();
   return (

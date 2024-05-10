@@ -3,6 +3,11 @@ import Image from "next/image";
 import logo from "@/assets/logo.png";
 import { getHeroSectionData } from "@/config/getData";
 
+export async function generateStaticParams() {
+  const data = await getHeroSectionData();
+  return data;
+}
+
 async function FooterMetaData() {
   const data = await getHeroSectionData();
 

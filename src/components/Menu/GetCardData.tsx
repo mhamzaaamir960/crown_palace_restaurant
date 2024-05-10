@@ -2,6 +2,10 @@ import React from "react";
 import { getImages } from "@/config/getData";
 import MenuCard from "./MenuCard";
 
+export async function generateStaticParams() {
+  return await getImages;
+}
+
 async function GetCardData({ menuItems }: { menuItems: any }) {
   const images = await Promise.all(
     menuItems.map((item: any) => getImages(item.fields.itemImage.sys.id))

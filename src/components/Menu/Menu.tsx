@@ -4,6 +4,14 @@ import GetCardData from "./GetCardData";
 import getData from "@/config/getData";
 import MenuPageBtn from "./MenuPageBtn";
 
+export async function generateStaticParams() {
+  const data = await getData();
+  const $menuItems = await data.items.filter(
+    (item: any) => item.sys.contentType.sys.id === "menu"
+  );
+  return $menuItems;
+}
+
 export async function ItemsData() {
   const data = await getData();
   const $menuItems = await data.items.filter(

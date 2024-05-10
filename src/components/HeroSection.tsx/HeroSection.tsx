@@ -3,6 +3,11 @@ import { getImages, getHeroSectionData } from "@/config/getData";
 import HeroText from "./HeroText";
 import HeroImage from "./HeroImage";
 
+export async function generateStaticParams() {
+  const $data = await getHeroSectionData();
+  return [$data,$data.fields.homePageImage.sys.id]
+}
+
 async function HeroSection() {
   const $data = await getHeroSectionData();
   const image = await getImages($data.fields.homePageImage.sys.id);

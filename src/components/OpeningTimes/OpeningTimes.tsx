@@ -3,6 +3,14 @@ import Heading from "../Heading/Heading";
 import getData from "@/config/getData";
 import Schedule from "./Schedule";
 
+export async function generateStaticParams() {
+  const data = await getData();
+  const openingTimes = await data.items.filter(
+    (item: any) => item.sys.contentType.sys.id === "openingTimes"
+  );
+  return openingTimes;
+}
+
 async function OpeningTimes() {
   const data = await getData();
   const openingTimes = await data.items.filter(

@@ -1,27 +1,38 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { TbMessageCircleShare } from "react-icons/tb";
 
 function ContactForm() {
+  const [state, setState] = useState({});
+  const handleChange = (event: any) => {
+    event.target.value;
+  };
   return (
     <div className="flex  justify-center min-h-[400px] bg-primary rounded-xl max-w-[450px] w-full ">
       <div className="flex flex-1 flex-col justify-center items-center gap-y-2 w-full max-w-[80%] gap-y-4">
         <input
           placeholder="Name"
+          name="name"
           className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
           type="text"
         />
         <input
           placeholder="Email*"
+          name="email"
+          required
           className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
           type="email"
         />
         <input
           placeholder="Phone Number*"
+          name="phoneNumber"
+          required
           className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
           type="tel"
         />
         <input
           placeholder="Location"
+          name="location"
           className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
           type="text"
         />
@@ -29,6 +40,7 @@ function ContactForm() {
         <textarea
           rows={4}
           placeholder="How can we serve you?"
+          name="message"
           className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 flex items-end shadow-xl outline-none text-gray-300 "
         />
 
