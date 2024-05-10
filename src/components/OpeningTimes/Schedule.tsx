@@ -22,7 +22,7 @@ function Schedule({ time }: { time: any }) {
             item.fields.restaurantOpenClosed === true ? (
               <>
                 <div
-                  key={index}
+                  key={index+3}
                   className="grid grid-cols-3 p-2"
                 >
                   <h3 className="flex justify-start text-white text-lg md:text-xl font-normal font-sans">

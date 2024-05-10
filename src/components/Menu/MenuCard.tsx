@@ -13,7 +13,7 @@ function MenuCard({
 }) {
   return (
     <div
-      key={index}
+      key={index + 2}
       className="flex flex-col w-full min-w-[180px] max-w-[300px] bg-secondary rounded transition-all duration-500 hover:scale-105 hover:transition-all hover:ease-in-out hover:delay-100 hover:duration-500 shadow-lg"
     >
       <div>

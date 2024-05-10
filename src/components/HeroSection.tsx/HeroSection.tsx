@@ -13,7 +13,7 @@ async function HeroSection() {
   const image = await getImages($data.fields.homePageImage.sys.id);
 
   return (
-    <section className=" min-h-screen xxs:min-h-[80vh] sm:min-h-[90vh] md:min-h-[80vh] xl:min-h-screen  min-w-[300px] w-full bg-primary relative  flex justify-between p-2 sm:p-5 lg:p-10 ">
+    <section className=" min-h-screen  min-w-[300px] w-full bg-primary  flex flex-wrap md:justify-between items-center  p-2 sm:p-5 lg:p-10  mt-10">
       <HeroText data={$data} />
       <HeroImage heroImage={image} />
     </section>
