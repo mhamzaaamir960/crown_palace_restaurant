@@ -9,7 +9,7 @@ function HeroImage({ heroImage }: { heroImage: any }) {
         alt="Crown Palace Logo"
         width={250}
         height={250}
-        className=" xs:w-[400px] xs:h-[350px] md:w-[400px] md:h-[350px] xl:w-[450px] xl:h-[400px] rounded-s-full rounded-b-full border-2 border-secondary"
+        className=" xs:w-[400px] xs:h-[350px] md:w-[400px] md:h-[350px] xl:w-[450px] xl:h-[400px] rounded-s-full rounded-b-full border-2 border-secondary object-cover"
       />
     </div>
   );
