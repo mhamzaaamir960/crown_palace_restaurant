@@ -1,23 +1,40 @@
 import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
 
+interface EmailData {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  location: string;
+  message: string;
+}
+
+interface MailOption {
+  from: string;
+  to: string;
+  subject: string;
+  html: string;
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, phoneNumber, location, message } =
+    const { name, email, phoneNumber, location, message }: EmailData =
       await request.json();
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
-        user: process.env.NEXT_PUBLIC_EMAIL,
-        pass: process.env.NEXT_PUBLIC_PASSWORD,
+        user: process.env.BUSINESS_EMAIL as string,
+        pass: process.env.BUSINESS_EMAIL_PASSWORD as string,
       },
     });
-    const mailOption = {
-      from: process.env.NEXT_PUBLIC_EMAIL,
-      to: "camsecret2@gmail.com",
+
+    const mailOption: MailOption = {
+      from: process.env.BUSINESS_EMAIL as string,
+      to: process.env.BUSINESS_EMAIL as string,
       subject: "New message from your website contact form", // Subject line
       html: `
       <p>You have a new message from your website contact form:</p>

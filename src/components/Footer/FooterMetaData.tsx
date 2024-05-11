@@ -5,7 +5,7 @@ import { getHeroSectionData } from "@/config/getData";
 
 export async function generateStaticParams() {
   const data = await getHeroSectionData();
-  return data;
+  return data.fields;
 }
 
 async function FooterMetaData() {
