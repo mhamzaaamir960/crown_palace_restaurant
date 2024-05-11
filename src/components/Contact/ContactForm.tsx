@@ -124,8 +124,8 @@ function ContactForm() {
               size={"lg"}
             />
           ) : submitted ? (
-            <span className="flex justify-center items-center text-secondary font-medium gap-x-2 mt-2">
-              Message Sent Successfullay!
+            <span className="flex justify-center items-center text-secondary font-medium gap-x-2 mt-2 text-center">
+              Form submitted successfullay!
             </span>
           ) : (
             <button
