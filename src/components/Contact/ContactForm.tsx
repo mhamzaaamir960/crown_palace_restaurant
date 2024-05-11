@@ -109,12 +109,12 @@ function ContactForm() {
         />
 
         <textarea
-          rows={4}
+          rows={3}
           placeholder="How can we serve you?"
           name="message"
           value={state.message}
           onChange={handleChange}
-          className="bg-primary border-b-2 border-secondary w-full placeholder:text-gray-300 flex items-end shadow-xl outline-none text-gray-300"
+          className="bg-primary border-b-2 border-secondary w-full placeholder:text-gray-300 flex items-end shadow-xl outline-none text-gray-300 min-h-[70px] max-h-[120px] p-1"
         />
 
         <div className="">
