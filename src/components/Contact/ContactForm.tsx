@@ -2,38 +2,62 @@
 import React, { useState } from "react";
 import { TbMessageCircleShare } from "react-icons/tb";
 
+type StateType = {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  location: string;
+  message: string;
+};
+
 function ContactForm() {
-  const [state, setState] = useState({});
+  const [state, setState] = useState<StateType>();
+
   const handleChange = (event: any) => {
-    event.target.value;
+    const { name, value } = event.target;
+    setState((prevState: any) => ({ ...prevState, [name]: value }));
   };
+
+  const handleSubmit = (event:any) => {
+    event.preventDefault();
+    console.log(state)
+
+  }
   return (
-    <div className="flex  justify-center min-h-[400px] bg-primary rounded-xl max-w-[450px] w-full ">
-      <div className="flex flex-1 flex-col justify-center items-center gap-y-2 w-full max-w-[80%] gap-y-4">
+    <form onSubmit={handleSubmit} className="flex  justify-center min-h-[400px] bg-primary rounded-xl max-w-[450px] w-full ">
+      <div className="flex flex-1 flex-col justify-center items-center gap-y-2 w-full max-w-[80%] gap-y-4 bg-primary">
         <input
           placeholder="Name"
           name="name"
-          className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
+          value={state?.name}
+          onChange={handleChange}
+          className=" bg-primary border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none p-1"
           type="text"
         />
         <input
           placeholder="Email*"
           name="email"
+          value={state?.email}
+          onChange={handleChange}
           required
-          className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
+          className=" bg-primary border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none p-1"
           type="email"
         />
         <input
           placeholder="Phone Number*"
           name="phoneNumber"
+          value={state?.phoneNumber}
+          onChange={handleChange}
           required
-          className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
+          className=" bg-primary border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none p-1"
           type="tel"
         />
         <input
           placeholder="Location"
           name="location"
-          className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none"
+          value={state?.location}
+          onChange={handleChange}
+          className=" bg-primary border-b-2 border-secondary w-full placeholder:text-gray-300 text-gray-300 outline-none p-1"
           type="text"
         />
 
@@ -41,7 +65,9 @@ function ContactForm() {
           rows={4}
           placeholder="How can we serve you?"
           name="message"
-          className="bg-inherit border-b-2 border-secondary w-full placeholder:text-gray-300 flex items-end shadow-xl outline-none text-gray-300 "
+          value={state?.message}
+          onChange={handleChange}
+          className=" bg-primary border-b-2 border-secondary w-full placeholder:text-gray-300 flex items-end shadow-xl outline-none text-gray-300 "
         />
 
         <button
@@ -51,7 +77,7 @@ function ContactForm() {
           <TbMessageCircleShare /> <span>Submit</span>
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 
