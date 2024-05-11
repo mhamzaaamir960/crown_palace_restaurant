@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { TbMessageCircleShare } from "react-icons/tb";
 
+
 type StateType = {
   name: string;
   email: string;
@@ -30,23 +31,29 @@ function ContactForm() {
     event.preventDefault();
 
     try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
         headers: {
-          'content-type': 'application/json'
+          "content-type": "application/json",
         },
-        body: JSON.stringify(state)
+        body: JSON.stringify(state),
       });
 
       if (!response.ok) {
         throw new Error("Failed to send email");
       }
 
-      console.log(await response.json());
+      try {
+        console.log(await response.json());
+      } catch (error) {
+        console.error("Error parsing response JSON:", error);
+      }
     } catch (error) {
-      console.error(error);
+      console.error("Error sending email:", error);
     }
   };
+
+
   return (
     <form
       onSubmit={handleSubmit}

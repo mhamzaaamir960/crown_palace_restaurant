@@ -52,9 +52,11 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
+    console.error("Error sending email:", error); // Log the error
     return NextResponse.json(
       { message: "Failed to Send Email" },
       { status: 500 }
     );
   }
 }
+
